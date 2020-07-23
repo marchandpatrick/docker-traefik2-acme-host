@@ -11,7 +11,7 @@ This document should be used to launch the `acme` service on host `dgdocker3.gri
 
 Before entering the prescribed "Command Sequence", below, the user should take steps to...
 
-  - Specify subdmain/domain for wichich certificate is to be generated: variable MYSITE
+  - Specify subdmain/domain for which certificate is to be generated: variable MYSITE
   - Comment out one of the `CASERVER=` specifications.  Comment out the second one (includes 'staging') for **production**, or the first one for **testing/staging**.
   - Make sure that the `-d`, `--key-file`, and `--cert-file` flags all specify `dgdocker3.grinnell.edu`.
 
