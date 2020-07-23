@@ -12,10 +12,15 @@ services:
       - ../certs:/certs
     restart: unless-stopped
     environment:
-      AZUREDNS_SUBSCRIPTIONID: ${AZURE_SUBSCRIPTION_ID}
-      AZUREDNS_TENANTID: ${AZURE_TENANT_ID}
-      AZUREDNS_APPID: ${AZURE_CLIENT_ID}
-      AZUREDNS_CLIENTSECRET: ${AZURE_CLIENT_SECRET}
+    # for azure
+#      AZUREDNS_SUBSCRIPTIONID: ${AZURE_SUBSCRIPTION_ID}
+#      AZUREDNS_TENANTID: ${AZURE_TENANT_ID}
+#      AZUREDNS_APPID: ${AZURE_CLIENT_ID}
+#      AZUREDNS_CLIENTSECRET: ${AZURE_CLIENT_SECRET}
+     # for cloudflare (use .env to difine variables
+      - CF_Key=${MYCFKEY}
+      - CF_Email=${MYCFEMAIL}
+
     command: daemon
     # command: daemon && ${ACME_COMMAND}
     container_name: acme
